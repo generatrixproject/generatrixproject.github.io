@@ -1,0 +1,821 @@
+P:colon
+V:1.0-r2
+A:x86_64
+S:888088
+I:1703302
+T:colon (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:cups-libs
+V:2.4.19-r0
+A:x86_64
+S:240986
+I:543924
+T:cups-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0
+D:so:libssl.so.3 so:libcrypto.so.3 so:libz.so.1 
+p:so:libcups.so.2=2
+
+P:gettext-libs
+V:0.24-r0
+A:x86_64
+S:2665
+I:4928
+T:gettext-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libintl.so.8=8
+
+P:glib-networking
+V:2.80.1-r0
+A:x86_64
+S:58667
+I:165896
+T:glib-networking (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+D:so:libgio-2.0.so.0 so:libgobject-2.0.so.0 so:libglib-2.0.so.0 so:libintl.so.8 so:libssl.so.3 so:libcrypto.so.3 
+
+P:gnu-libiconv
+V:1.18-r0
+A:x86_64
+S:2733
+I:4770
+T:gnu-libiconv (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libiconv.so.2=2
+
+P:gx-busybox
+V:1.36.1-r1
+A:x86_64
+S:766766
+I:1228245
+T:gx-busybox (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:gx-desktop
+V:1.0-r1
+A:x86_64
+S:1061
+I:11
+T:gx-desktop (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-system gx-installer hevel colon
+
+P:gx-e2fsprogs
+V:1.47.2-r1
+A:x86_64
+S:605657
+I:1162000
+T:gx-e2fsprogs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:gx-etc
+V:1.0-r1
+A:x86_64
+S:10447
+I:13095
+T:gx-etc (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:gx-kernel
+V:7.1.3-r1
+A:x86_64
+S:9255038
+I:9294848
+T:gx-kernel (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-base
+
+P:gx-musl
+V:1.2.5-r1
+A:x86_64
+S:410740
+I:659208
+T:gx-musl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:gx-system
+V:1.0-r1
+A:x86_64
+S:1062
+I:10
+T:gx-system (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl gx-busybox gx-init gx-base gx-etc gx-kernel gx-boot gx-e2fsprogs gx-wireless world
+
+P:gx-wireless
+V:2.22-r1
+A:x86_64
+S:662662
+I:1375789
+T:gx-wireless (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:gxfetch
+V:1.0-r0
+A:x86_64
+S:28400
+I:46304
+T:gxfetch (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:java-cacerts
+V:1.1-r0
+A:x86_64
+S:141378
+I:140160
+T:java-cacerts (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MPL-2.0
+D:ca-certificates
+
+P:libcurl
+V:8.21.0-r0
+A:x86_64
+S:344385
+I:738024
+T:libcurl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:curl
+D:so:libssl.so.3 so:libcrypto.so.3 so:libz.so.1 
+p:so:libcurl.so.4=4
+
+P:libtasn1
+V:4.21.0-r0
+A:x86_64
+S:18538
+I:32458
+T:libtasn1 (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libtasn1.so.6=6
+
+P:libunistring
+V:1.2-r0
+A:x86_64
+S:94119
+I:375266
+T:libunistring (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libunistring.so.5=5
+
+P:ncurses-libs
+V:0.3.2-r3
+A:x86_64
+S:316399
+I:1882978
+T:ncurses-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libncursesw.so.6=6 so:libncurses.so.6=6 so:libtinfo.so.6=6 so:libformw.so.6=6 so:libmenuw.so.6=6 so:libpanelw.so.6=6
+
+P:readline
+V:8.3-r0
+A:x86_64
+S:2620
+I:4328
+T:readline (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:so:libedit.so.0
+p:so:libreadline.so.8=8
+
+P:gx-boot
+V:8.6.0-r2
+A:x86_64
+S:285449
+I:541500
+T:gx-boot (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:gx-installer
+V:1.0-r2
+A:x86_64
+S:4805
+I:10574
+T:gx-installer (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:gx-init
+V:2.13.1.0-r2
+A:x86_64
+S:1578126
+I:3742161
+T:gx-init (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:gx-base
+V:1.0-r2
+A:x86_64
+S:5572
+I:8809
+T:gx-base (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:gx-musl
+
+P:hevel
+V:1.0-r3
+A:x86_64
+S:79143
+I:203110
+T:hevel (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+D:so:libwayland-server.so.0 so:libdrm.so.2 so:libpixman-1.so.0 so:libxkbcommon.so.0 so:libfontconfig.so.1 so:libfreetype.so.6 so:libwayland-client.so.0 so:libinput.so.10 so:libudev.so.1 colon
+
+P:libgomp
+V:21.1.5-r0
+A:x86_64
+S:299173
+I:762120
+T:libgomp (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0-with-LLVM-exception
+p:so:libgomp.so.1=1
+
+P:fribidi
+V:3.0.0-r1
+A:x86_64
+S:37012
+I:111671
+T:fribidi (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libfribidi.so.0=0
+
+P:gdbm
+V:1.26-r0
+A:x86_64
+S:10397
+I:22287
+T:gdbm (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libgdbm.so.6=6 so:libgdbm_compat.so.4=4
+
+P:libgcc
+V:21.1.5-r0
+A:x86_64
+S:28550
+I:56176
+T:libgcc (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0-with-LLVM-exception
+p:so:libgcc_s.so.1=1
+
+P:libatomic
+V:21.1.5-r0
+A:x86_64
+S:7510
+I:18272
+T:libatomic (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0-with-LLVM-exception
+p:so:libatomic.so.1=1
+
+P:libcxx-static
+V:21.1.5-r0
+A:x86_64
+S:789145
+I:3748056
+T:libcxx-static (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0-with-LLVM-exception
+
+P:icu-libs
+V:78.3-r0
+A:x86_64
+S:15146088
+I:39015224
+T:icu-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Unicode-3.0
+p:so:libicuuc.so.78=78.3 so:libicui18n.so.78=78.3 so:libicuio.so.78=78.3 so:libicudata.so.78=78.3
+
+P:par2cmdline
+V:1.2.0-r0
+A:x86_64
+S:299112
+I:799860
+T:par2cmdline (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+D:so:libgomp.so.1 
+
+P:mesa
+V:26.1.6-r0
+A:x86_64
+S:3905351
+I:17364632
+T:mesa (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+p:so:libgallium-26.1.6.so=0
+
+P:mesa-gbm
+V:26.1.6-r0
+A:x86_64
+S:6278
+I:12290
+T:mesa-gbm (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+D:mesa=26.1.6-r0
+p:so:libgbm.so.1=1.0.0
+
+P:mesa-egl
+V:26.1.6-r0
+A:x86_64
+S:119085
+I:352786
+T:mesa-egl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+D:mesa=26.1.6-r0 mesa-gbm=26.1.6-r0
+p:so:libEGL.so.1=1.0.0
+
+P:mesa-gles
+V:26.1.6-r0
+A:x86_64
+S:13925
+I:41552
+T:mesa-gles (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+D:mesa=26.1.6-r0
+p:so:libGLESv2.so.2=2.0.0
+
+P:mesa-dri-gallium
+V:26.1.6-r0
+A:x86_64
+S:1023
+I:0
+T:mesa-dri-gallium (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+D:mesa=26.1.6-r0 so:libgbm.so.1
+
+P:shared-mime-info
+V:2.4-r0
+A:x86_64
+S:1393297
+I:5421976
+T:shared-mime-info (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+D:so:libglib-2.0.so.0 so:libxml2.so.2 
+
+P:mpdecimal
+V:4.0.1-r0
+A:x86_64
+S:320389
+I:954624
+T:mpdecimal (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause
+p:so:libmpdec.so.4=4.0.1 so:libmpdec++.so.4=4.0.1
+
+P:snappy
+V:1.2.2-r0
+A:x86_64
+S:112083
+I:319560
+T:snappy (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+p:so:libsnappy.so.1=1.2.2
+
+P:gc
+V:8.2.12-r0
+A:x86_64
+S:166144
+I:409542
+T:gc (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+p:so:libgc.so.1=1.5.6 so:libcord.so.1=1.5.1 so:libgctba.so.1=1.5.0
+
+P:libzmq
+V:4.3.5-r0
+A:x86_64
+S:440117
+I:1210510
+T:libzmq (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MPL-2.0
+D:so:libsodium.so.26 
+p:so:libzmq.so.5=5.2.5
+
+P:geany
+V:2.1-r0
+A:x86_64
+S:4440289
+I:13122437
+T:geany (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+D:so:libgeany.so.0 so:libgtk-3.so.0 so:libgdk-3.so.0 so:libpangocairo-1.0.so.0 so:libcairo-gobject.so.2 so:libgdk_pixbuf-2.0.so.0 so:libatk-1.0.so.0 so:libpango-1.0.so.0 so:libcairo.so.2 so:libharfbuzz.so.0 so:libgio-2.0.so.0 so:libgobject-2.0.so.0 so:libz.so.1 so:libgmodule-2.0.so.0 so:libgthread-2.0.so.0 so:libglib-2.0.so.0 so:libintl.so.8 
+
+P:libheif
+V:1.23.0-r0
+A:x86_64
+S:840067
+I:2440133
+T:libheif (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-3.0-or-later
+D:so:libde265.so.0 
+p:so:libheif.so.1=1.23.0
+
+P:libvpl
+V:2.15.0-r0
+A:x86_64
+S:316312
+I:906273
+T:libvpl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+p:so:libvpl.so.2=2.15.0
+
+P:librdkafka
+V:2.15.0-r0
+A:x86_64
+S:1115150
+I:3187960
+T:librdkafka (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause
+D:so:libz.so.1 so:libzstd.so.1 so:libssl.so.3 so:libcrypto.so.3 so:libsasl2.so.3 
+p:so:librdkafka.so.1=2.15.0 so:librdkafka++.so.1=2.15.0
+
+P:roc-toolkit-libs
+V:0.4.0-r0
+A:x86_64
+S:492063
+I:1891226
+T:roc-toolkit-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MPL-2.0
+D:so:libuv.so.1 so:libspeexdsp.so.1 
+p:so:libroc.so.0.4=0.4
+
+P:libical
+V:3.0.20-r0
+A:x86_64
+S:312138
+I:987577
+T:libical (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+D:so:libicuuc.so.78 so:libicui18n.so.78 so:libicudata.so.78 
+p:so:libical.so.3=3.0.20 so:libicalss.so.3=3.0.20 so:libicalvcal.so.3=3.0.20 so:libical_cxx.so.3=3.0.20 so:libicalss_cxx.so.3=3.0.20
+
+P:libmemcached-libs
+V:1.1.4-r0
+A:x86_64
+S:173774
+I:448910
+T:libmemcached-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+D:so:libhashkit.so.2 
+p:so:libmemcached.so.11=1.1.4 so:libmemcachedutil.so.2=1.1.4 so:libhashkit.so.2=1.1.4
+
+P:zstd
+V:1.5.7-r0
+A:x86_64
+S:768533
+I:1905023
+T:zstd (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+p:cmd:zstd=1.5.7 cmd:unzstd=1.5.7 cmd:zstdcat=1.5.7 cmd:zstdmt=1.5.7 cmd:pzstd=1.5.7 cmd:zstdgrep=1.5.7 cmd:zstdless=1.5.7
+
+P:lzip
+V:1.26-r0
+A:x86_64
+S:134441
+I:343472
+T:lzip (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+p:cmd:lzip=1.26
+
+P:jemalloc
+V:5.3.0-r0
+A:x86_64
+S:336585
+I:981255
+T:jemalloc (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause
+p:so:libjemalloc.so.2=2 cmd:jemalloc.sh=5.3.0 cmd:jeprof=5.3.0
+
+P:py3-greenlet
+V:3.5.0-r0
+A:x86_64
+S:253293
+I:799689
+T:py3-greenlet (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT AND PSF-2.0
+D:python3 
+p:py-greenlet=3.5.0 py3.14:greenlet=3.5.0
+
+P:libyuv
+V:0.0.1928-r0
+A:x86_64
+S:461885
+I:1409736
+T:libyuv (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+D:so:libjpeg.so.8 
+p:so:libyuv.so=0 cmd:yuvconvert=0.0.1928
+
+P:tesseract-ocr
+V:5.5.3-r0
+A:x86_64
+S:1768674
+I:4298980
+T:tesseract-ocr (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0
+D:so:libcairo.so.2 so:libfontconfig.so.1 so:libfreetype.so.6 so:libglib-2.0.so.0 so:libgobject-2.0.so.0 so:libharfbuzz.so.0 so:libicui18n.so.78 so:libicuuc.so.78 so:libintl.so.8 so:libleptonica.so.6 so:libpango-1.0.so.0 so:libpangocairo-1.0.so.0 so:libpangoft2-1.0.so.0 
+p:so:libtesseract.so.5=5.5.3 so:libcommon_training.so=0 so:libunicharset_training.so=0 so:libpango_training.so=0 cmd:ambiguous_words=5.5.3 cmd:classifier_tester=5.5.3 cmd:cntraining=5.5.3 cmd:combine_lang_model=5.5.3 cmd:combine_tessdata=5.5.3 cmd:dawg2wordlist=5.5.3 cmd:lstmeval=5.5.3 cmd:lstmtraining=5.5.3 cmd:merge_unicharsets=5.5.3 cmd:mftraining=5.5.3 cmd:set_unicharset_properties=5.5.3 cmd:shapeclustering=5.5.3 cmd:tesseract=5.5.3 cmd:text2image=5.5.3 cmd:unicharset_extractor=5.5.3 cmd:wordlist2dawg=5.5.3
+
+P:libflac++
+V:1.5.0-r0
+A:x86_64
+S:100606
+I:316634
+T:libflac++ (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+D:so:libFLAC.so.14 so:libogg.so.0 
+p:so:libFLAC++.so.11=11.0.0
+
+P:libplist++
+V:2.7.0-r1
+A:x86_64
+S:97115
+I:286942
+T:libplist++ (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+D:so:libplist-2.0.so.4 
+p:so:libplist++-2.0.so.4=4.7.0
+
+P:libconfig++
+V:1.8.2-r0
+A:x86_64
+S:270704
+I:838750
+T:libconfig++ (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+p:so:libconfig++.so.15=15.0.0
+
+P:uchardet-libs
+V:0.0.8-r2
+A:x86_64
+S:159493
+I:430412
+T:uchardet-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MPL-1.1
+p:so:libuchardet.so.0=0.0.8
+
+P:x265-libs
+V:4.1-r0
+A:x86_64
+S:1200425
+I:6136102
+T:x265-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+p:so:libx265.so.215=215
+
+P:openal-soft-libs
+V:1.25.2-r0
+A:x86_64
+S:1006487
+I:2313225
+T:openal-soft-libs (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.0-or-later
+p:so:libopenal.so.1=1.25.2
+
+P:geos
+V:3.14.1-r0
+A:x86_64
+S:1874713
+I:5551474
+T:geos (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+p:so:libgeos.so.3.14.1=3.14.1 so:libgeos_c.so.1=1.20.5 cmd:geosop=3.14.1
+
+P:zopfli
+V:1.0.3-r0
+A:x86_64
+S:737290
+I:1965838
+T:zopfli (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:Apache-2.0
+p:so:libzopfli.so.1=1.0.3 so:libzopflipng.so.1=1.0.3 cmd:zopfli=1.0.3 cmd:zopflipng=1.0.3
+
+P:libmarisa
+V:0.2.6-r8
+A:x86_64
+S:372951
+I:1140716
+T:libmarisa (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause
+p:so:libmarisa.so.0=0.0.0 cmd:marisa-benchmark=0.2.6 cmd:marisa-build=0.2.6 cmd:marisa-common-prefix-search=0.2.6 cmd:marisa-dump=0.2.6 cmd:marisa-lookup=0.2.6 cmd:marisa-predictive-search=0.2.6 cmd:marisa-reverse-lookup=0.2.6
+
+P:libsass
+V:3.6.6-r0
+A:x86_64
+S:1098385
+I:3526872
+T:libsass (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+p:so:libsass.so.1=1.0.0
+
+P:libgpiod
+V:2.3.1-r0
+A:x86_64
+S:564744
+I:1986001
+T:libgpiod (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:LGPL-2.1-or-later
+D:so:libedit.so.0 so:libgio-2.0.so.0 so:libglib-2.0.so.0 so:libgobject-2.0.so.0 so:libgudev-1.0.so.0 
+p:so:libgpiod.so.3=3.1.2 so:libgpiodcxx.so.2=2.1.1 so:libgpiod-glib.so.1=1.0.0 so:libgpiodbus.so.1=1 so:libgpiotools.so.1=1.0.0 cmd:gpio-manager=2.3.1 cmd:gpiocli=2.3.1 cmd:gpiodetect=2.3.1 cmd:gpioget=2.3.1 cmd:gpioinfo=2.3.1 cmd:gpiomon=2.3.1 cmd:gpionotify=2.3.1 cmd:gpioset=2.3.1
+
+P:py3-ujson
+V:5.13.0-r0
+A:x86_64
+S:253450
+I:744379
+T:py3-ujson (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause AND TCL
+D:python3 
+
+P:libtiffxx
+V:4.7.2-r0
+A:x86_64
+S:240853
+I:763548
+T:libtiffxx (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:libtiff
+D:so:libjpeg.so.8 so:libtiff.so.6 so:libz.so.1 
+p:so:libtiffxx.so.6=6.3.0
+
+P:proj
+V:9.8.1-r0
+A:x86_64
+S:3827384
+I:15595657
+T:proj (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:MIT
+D:so:libcurl.so.4 so:libsqlite3.so.0 so:libtiff.so.6 
+p:so:libproj.so.25=25.9.8.1
+
+P:syslog-ng
+V:4.11.0-r0
+A:x86_64
+S:1284692
+I:3959257
+T:syslog-ng (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:GPL-2.0-or-later
+D:so:libcrypto.so.3 so:libcurl.so.4 so:libglib-2.0.so.0 so:libgmodule-2.0.so.0 so:libgthread-2.0.so.0 so:libintl.so.8 so:libjson-c.so.5 so:libpcre2-8.so.0 so:libssl.so.3 so:libz.so.1 
+p: so:libsyslog-ng-4.11.so.0=0.0.0 so:libevtlog-4.11.so.0=0.0.0 so:libloggen_plugin-4.11.so.0=0.0.0 so:libloggen_helper-4.11.so.0=0.0.0 so:libsecret-storage.so.0=0.0.0 cmd:dqtool=4.11.0 cmd:loggen=4.11.0 cmd:pdbtool=4.11.0 cmd:persist-tool=4.11.0 cmd:slogencrypt=4.11.0 cmd:slogkey=4.11.0 cmd:slogverify=4.11.0 cmd:syslog-ng-update-virtualenv=4.11.0 cmd:update-patterndb=4.11.0 cmd:syslog-ng=4.11.0 cmd:syslog-ng-ctl=4.11.0 cmd:syslog-ng-debun=4.11.0
+
+P:ghostscript
+V:10.07.1-r0
+A:x86_64
+S:26204378
+I:60383830
+T:ghostscript (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:AGPL-3.0-or-later
+D:so:libbrotlicommon.so.1 so:libbrotlidec.so.1 so:libbrotlienc.so.1 so:libfontconfig.so.1 so:libfreetype.so.6 so:libjbig2dec.so.0 so:libjpeg.so.8 so:liblcms2.so.2 so:libopenjp2.so.7 so:libpng16.so.16 so:libtiff.so.6 so:libz.so.1 
+p: so:libgs.so.10=10.07.1 cmd:dvipdf=10.07.1 cmd:eps2eps=10.07.1 cmd:gs=10.07.1 cmd:gsbj=10.07.1 cmd:gsc=10.07.1 cmd:gsdj=10.07.1 cmd:gsdj500=10.07.1 cmd:gslj=10.07.1 cmd:gslp=10.07.1 cmd:gsnd=10.07.1 cmd:gsx=10.07.1 cmd:lprsetup.sh=10.07.1 cmd:pdf2dsc=10.07.1 cmd:pdf2ps=10.07.1 cmd:pf2afm=10.07.1 cmd:pfbtopfa=10.07.1 cmd:pphs=10.07.1 cmd:printafm=10.07.1 cmd:ps2ascii=10.07.1 cmd:ps2epsi=10.07.1 cmd:ps2pdf=10.07.1 cmd:ps2pdf12=10.07.1 cmd:ps2pdf13=10.07.1 cmd:ps2pdf14=10.07.1 cmd:ps2pdfwr=10.07.1 cmd:ps2ps=10.07.1 cmd:ps2ps2=10.07.1 cmd:unix-lpr.sh=10.07.1
+
+P:world
+V:1.0-r6
+A:x86_64
+S:47177
+I:79912
+T:world (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+
+P:libidn2
+V:2.3.7-r0
+A:x86_64
+S:185451
+I:652240
+T:libidn2 (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-2-Clause-Patent
+p:so:libidn2.so.0=0
+
+P:graphviz
+V:12.2.1-r3
+A:x86_64
+S:1699034
+I:3943262
+T:graphviz (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:EPL-1.0
+D:font-cantarell so:libX11.so.6 so:libXrender.so.1 so:libcairo.so.2 so:libcdt.so.5 so:libcgraph.so.6 so:libexpat.so.1 so:libfontconfig.so.1 so:libfreetype.so.6 so:libgd.so.3 so:libglib-2.0.so.0 so:libgobject-2.0.so.0 so:libgvc.so.6 so:libgvpr.so.2 so:libharfbuzz.so.0 so:libintl.so.8 so:libpango-1.0.so.0 so:libpangocairo-1.0.so.0 so:libpangoft2-1.0.so.0 so:libpathplan.so.4 so:libwebp.so.7 so:libxdot.so.4 so:libz.so.1 
+p: so:libgvplugin_webp.so.6=6.0.0 so:libgvplugin_xlib.so.6=6.0.0 so:libgvplugin_neato_layout.so.6=6.0.0 so:libgvplugin_gd.so.6=6.0.0 so:libgvplugin_vt.so.6=6.0.0 so:libgvplugin_dot_layout.so.6=6.0.0 so:libgvplugin_pango.so.6=6.0.0 so:libgvplugin_kitty.so.6=6.0.0 so:libgvplugin_core.so.6=6.0.0 cmd:acyclic=12.2.1 cmd:bcomps=12.2.1 cmd:ccomps=12.2.1 cmd:circo=12.2.1 cmd:cluster=12.2.1 cmd:diffimg=12.2.1 cmd:dijkstra=12.2.1 cmd:dot=12.2.1 cmd:dot2gxl=12.2.1 cmd:dot_builtins=12.2.1 cmd:edgepaint=12.2.1 cmd:fdp=12.2.1 cmd:gc=12.2.1 cmd:gml2gv=12.2.1 cmd:graphml2gv=12.2.1 cmd:gv2gml=12.2.1 cmd:gv2gxl=12.2.1 cmd:gvcolor=12.2.1 cmd:gvgen=12.2.1 cmd:gvmap=12.2.1 cmd:gvmap.sh=12.2.1 cmd:gvpack=12.2.1 cmd:gvpr=12.2.1 cmd:gxl2dot=12.2.1 cmd:gxl2gv=12.2.1 cmd:mm2gv=12.2.1 cmd:neato=12.2.1 cmd:nop=12.2.1 cmd:osage=12.2.1 cmd:patchwork=12.2.1 cmd:prune=12.2.1 cmd:sccmap=12.2.1 cmd:sfdp=12.2.1 cmd:tred=12.2.1 cmd:twopi=12.2.1 cmd:unflatten=12.2.1 cmd:vimdot=12.2.1
+
+P:nmap
+V:7.99-r0
+A:x86_64
+S:6725581
+I:26487154
+T:nmap (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:custom
+D:so:libcrypto.so.3 so:libpcap.so.1 so:libpcre2-8.so.0 so:libssh2.so.1 so:libssl.so.3 so:libz.so.1 
+p:cmd:nmap=7.99
+
+P:php85-intl
+V:8.5.9-r0
+A:x86_64
+S:192357
+I:618991
+T:php85-intl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:PHP-3.01
+D:php85-common so:libicui18n.so.78 so:libicuio.so.78 so:libicuuc.so.78 
+p:php-intl
+
+P:php83-intl
+V:8.3.33-r0
+A:x86_64
+S:163511
+I:536575
+T:php83-intl (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:PHP-3.01
+D:php83-common so:libicui18n.so.78 so:libicuio.so.78 so:libicuuc.so.78 
+p:php-intl
+
+P:py3-numpy
+V:2.5.1-r0
+A:x86_64
+S:6433086
+I:20560732
+T:py3-numpy (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+D:python3 
+p:py3.14:numpy=2.5.1-r0 py-numpy=2.5.1-r0
+
+P:py3-pandas
+V:3.0.4-r0
+A:x86_64
+S:6825739
+I:22518869
+T:py3-pandas (generatrix)
+U:https://gitlab.com/generatrix-linux/generatrix-linux
+L:BSD-3-Clause
+D:py3-numpy py3-dateutil py3-tz python3 
+p:py3.14:pandas=3.0.4-r0
+

@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generatrix Linux handbook - installing by hand</title>
+<meta name="description" content="The Generatrix Linux handbook. A manual installation from a live usb to a running system: network, partitions, packages, boot loader.">
+<link rel="canonical" href="https://generatrixproject.github.io/handbook.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generatrix Linux handbook">
+<meta property="og:description" content="Install Generatrix Linux by hand. Every step explained.">
+<meta property="og:url" content="https://generatrixproject.github.io/handbook.html">
+<style>
+@font-face{font-family:"Gx8x8";src:url(data:font/woff;base64,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) format("woff");font-display:swap}
+:root{--bg:#ff7a00;--fg:#000;--link:#0000cc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+ font-family:"Gx8x8","Courier New",monospace;font-size:16px;line-height:2;
+ -webkit-font-smoothing:none;font-smooth:never;padding:2rem 1rem}
+main{max-width:74ch;margin:0 auto}
+h1{font-size:32px;line-height:1.4;margin:0}
+h2{font-size:16px;margin:2.5rem 0 .5rem;text-transform:lowercase}
+h3{font-size:16px;margin:1.8rem 0 .3rem;font-weight:normal;text-decoration:underline}
+p,li{margin:.5rem 0}
+ul{padding-left:2ch}
+a{color:var(--link)}
+a:hover{background:var(--link);color:var(--bg)}
+pre{margin:.8rem 0;overflow-x:auto;font-family:inherit;font-size:16px;line-height:1.8}
+hr{border:0;border-top:2px solid var(--fg);margin:2.5rem 0}
+header p{margin:.2rem 0 0}
+footer{margin-top:3rem;font-size:16px}
+img{max-width:100%;height:auto;border:2px solid var(--fg);display:block}
+html{scroll-behavior:smooth}
+.jump{position:fixed;top:1rem;right:1rem;display:flex;align-items:center;
+ gap:.6ch;color:var(--link);text-decoration:none;border:2px solid var(--fg);
+ padding:.15rem .5rem;background:var(--bg)}
+.jump span{width:0;height:0;border-left:5px solid transparent;
+ border-right:5px solid transparent;border-top:9px solid var(--link)}
+.jump:hover{background:var(--link);color:var(--bg)}
+.jump:hover span{border-top-color:var(--bg)}
+@media(max-width:640px){.jump{top:.4rem;right:.4rem}}
+@media(max-width:640px){body{font-size:12px;padding:1rem .6rem}
+ h1{font-size:24px}h2,h3,p,li,pre{font-size:12px}}
+
+.box{border:2px solid var(--fg);padding:.4rem .8rem;margin:1rem 0}
+main pre{border-left:4px solid var(--fg);padding:.2rem 0 .2rem 1ch;
+ margin:.9rem 0 .9rem .5ch}
+.box b{display:block}
+.toc{border:2px solid var(--fg);padding:.6rem 1rem;margin:1.5rem 0}
+.toc ul{list-style:none;padding-left:0;margin:.2rem 0}
+.toc ul ul{padding-left:3ch}
+.toc li{margin:0}
+h2{border-bottom:2px solid var(--fg);padding-bottom:.2rem}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Generatrix Linux handbook</h1>
+</header>
+
+<div class="toc">
+<b>contents</b>
+<ul>
+<li><a href="#c1">1. Introduction</a></li>
+<ul>
+<li><a href="#s1">1.1 About this handbook</a></li>
+<li><a href="#s2">1.2 What Generatrix is, briefly</a></li>
+<li><a href="#s3">1.3 How the installation is structured</a></li>
+<li><a href="#s4">1.4 Before you start</a></li>
+</ul>
+<li><a href="#c2">2. The installation medium</a></li>
+<ul>
+<li><a href="#s5">2.1 Which image</a></li>
+<li><a href="#s6">2.2 Writing the image</a></li>
+<li><a href="#s7">2.3 Booting and logging in</a></li>
+</ul>
+<li><a href="#c3">3. Getting on the network</a></li>
+<ul>
+<li><a href="#s8">3.1 Why this comes first</a></li>
+<li><a href="#s9">3.2 Wired</a></li>
+<li><a href="#s10">3.3 Wireless</a></li>
+<li><a href="#s11">3.4 Checking that it really works</a></li>
+</ul>
+<li><a href="#c4">4. Preparing the disk</a></li>
+<ul>
+<li><a href="#s12">4.1 Finding the disk</a></li>
+<li><a href="#s13">4.2 Deciding the layout</a></li>
+<li><a href="#s14">4.3 Creating the partitions</a></li>
+<li><a href="#s15">4.4 Creating the filesystems</a></li>
+<li><a href="#s16">4.5 Mounting</a></li>
+</ul>
+<li><a href="#c5">5. Installing the base system</a></li>
+<ul>
+<li><a href="#s17">5.1 About world</a></li>
+<li><a href="#s18">5.2 Preparing the target</a></li>
+<li><a href="#s19">5.3 What you are about to install</a></li>
+<li><a href="#s20">5.4 Installing</a></li>
+</ul>
+<li><a href="#c6">6. Configuring the system</a></li>
+<ul>
+<li><a href="#s21">6.1 Finishing the install</a></li>
+<li><a href="#s22">6.2 The filesystem table</a></li>
+<li><a href="#s23">6.3 Hostname and password</a></li>
+<li><a href="#s24">6.4 Timezone and keyboard</a></li>
+<li><a href="#s25">6.5 Carrying your wifi over</a></li>
+</ul>
+<li><a href="#c7">7. The boot loader</a></li>
+<ul>
+<li><a href="#s26">7.1 How Generatrix boots</a></li>
+<li><a href="#s27">7.2 Bios</a></li>
+<li><a href="#s28">7.3 Uefi</a></li>
+<li><a href="#s29">7.4 The command line, explained</a></li>
+</ul>
+<li><a href="#c8">8. Rebooting</a></li>
+<li><a href="#c9">9. After the installation</a></li>
+<ul>
+<li><a href="#s30">9.1 Keeping the system current</a></li>
+<li><a href="#s31">9.2 Adding the desktop</a></li>
+<li><a href="#s32">9.3 Installing other software</a></li>
+<li><a href="#s33">9.4 Command reference</a></li>
+</ul>
+<li><a href="#c10">10. If something goes wrong</a></li>
+<ul>
+<li><a href="#s41">limine-bios.sys build ID mismatch</a></li>
+<li><a href="#s34">Kernel panic: Attempted to kill init</a></li>
+<li><a href="#s35">Kernel panic: VFS: Unable to mount root fs</a></li>
+<li><a href="#s36">Boot ends in a repair shell and fsck failed</a></li>
+<li><a href="#s37">world cannot fetch a repository index</a></li>
+<li><a href="#s38">Wifi saved the network but never connects</a></li>
+<li><a href="#s39">The wireless interface is called wlan2 and nothing works</a></li>
+<li><a href="#s40">Programs have no text in their menus after installing a desktop</a></li>
+</ul>
+</ul>
+</div>
+
+<p>Installing Generatrix by hand, from a live usb to a running system.</p>
+
+<h2 id="c1">1. Introduction</h2>
+
+<h3 id="s1">1.1 About this handbook</h3>
+
+<p>This handbook walks through a manual installation of Generatrix Linux. Manual
+means you do every step yourself. You look at the disk, you make the partitions,
+you download the packages, you write the boot loader config. Nothing asks you
+questions and nothing happens behind your back.</p>
+
+<p>That is not an accident. The minimal image ships no installer at all. If you
+want a program that asks you questions, use the gui image, which still carries
+generatrix-install.</p>
+
+<p>Every command here has been run on a real system. Where a step exists for a
+reason that is not obvious, this handbook explains the reason instead of asking
+you to trust it.</p>
+
+<h3 id="s2">1.2 What Generatrix is, briefly</h3>
+
+<p>Generatrix is a small independent Linux distribution. It has no gnu userland and
+no systemd. It is built from source on musl and busybox, uses s6 for init, clang
+instead of gcc, and limine to boot. There are no version numbers and no release
+names.</p>
+
+<p>It is a rolling system. You install once. After that the whole system moves
+forward with one command, and that includes the kernel, the c library and init
+itself. There is no such thing as a Generatrix version to upgrade from.</p>
+
+<h3 id="s3">1.3 How the installation is structured</h3>
+
+<p>The install has six real steps. Everything else is detail.</p>
+
+<ol>
+
+<li>Get on the network. The install downloads its packages, so this comes first.</li>
+
+<li>Prepare the disk. Partition it, put filesystems on it, mount it.</li>
+
+<li>Install the base system with the package manager.</li>
+
+<li>Finish the system. Service database, default config files.</li>
+
+<li>Set up the boot loader.</li>
+
+<li>Reboot.</li>
+
+</ol>
+
+<p>If you have installed Arch or done a Gentoo stage install, this will feel
+familiar. The main difference is step 3: there is no tarball to unpack. The base
+system is a set of ordinary packages, so installing it uses the same command you
+will later use to install a text editor.</p>
+
+<h3 id="s4">1.4 Before you start</h3>
+
+<p>You need a computer that can boot from usb, at least 64 MB of ram, a disk you
+are willing to erase, and an internet connection.</p>
+
+<div class="box"><b>Note</b>64 MB is the real floor, not a guess. The kernel decompresses itself into
+memory before anything else runs, and that alone needs about 40 MB. An installed
+system idles at around 11 to 16 MB.</div>
+
+<div class="box"><b>Warning</b>This handbook erases a disk. Read the disk name twice at every step. A
+mistyped device name is not recoverable.</div>
+
+<h2 id="c2">2. The installation medium</h2>
+
+<h3 id="s5">2.1 Which image</h3>
+
+<p>There are two x86_64 images.</p>
+
+<p>The minimal image is about 12 MB. It boots to a shell and gives you the package
+manager and the wifi tools. It has no installer and no desktop. This handbook is
+written for it.</p>
+
+<p>The gui image is about 18 MB. It has the same base plus hevel, a wayland
+compositor driven by mouse chords, and colon, a terminal written in Forth. It
+also carries the guided installer. You can still install it by hand with this
+handbook if you prefer, and ask for the desktop packages at chapter 5.</p>
+
+<h3 id="s6">2.2 Writing the image</h3>
+
+<p>Write the image to a usb stick from another computer. On Linux:</p>
+
+<pre>lsblk
+dd if=generatrix-rolling-x86_64.iso of=/dev/sdX \
+    bs=4M oflag=direct conv=fsync
+sync</pre>
+
+<div class="box"><b>Important</b>Run lsblk first and make sure /dev/sdX is the stick and not one
+of your disks. dd does not warn you and does not ask for confirmation.</div>
+
+<p>The image is a hybrid. The same file boots on bios and on uefi machines, and it
+boots from a usb stick as well as from a burned disc.</p>
+
+<h3 id="s7">2.3 Booting and logging in</h3>
+
+<p>Boot the stick. You get a boot menu, then a login prompt. Type root and press
+enter. The live system has no password.</p>
+
+<div class="box"><b>Important</b>Stay as root for the whole installation. The package manager needs
+it. There is also a subtler reason. busybox is installed setuid, so a shell
+started by an ordinary user can end up with the wrong effective user id, and
+then mount commands start failing with messages that do not point at the real
+cause.</div>
+
+<h2 id="c3">3. Getting on the network</h2>
+
+<h3 id="s8">3.1 Why this comes first</h3>
+
+<p>Older Generatrix images installed by copying the live filesystem onto the disk.
+That is no longer how it works. The base system is downloaded from the package
+repository, the same way any other program is. So the network has to work before
+anything is written to the disk. It also means the system you install is current
+on the day you install it, not on the day the image was built.</p>
+
+<h3 id="s9">3.2 Wired</h3>
+
+<p>If a cable is plugged in, the live system has usually already asked for an
+address. Check:</p>
+
+<pre>ip -4 addr show</pre>
+
+<p>If you see an inet line on an interface other than lo, you are online and
+can skip to chapter 4. If not, ask for a lease:</p>
+
+<pre>udhcpc -i eth0</pre>
+
+<h3 id="s10">3.3 Wireless</h3>
+
+<p>Generatrix uses eiwd, a fork of iwd built without dbus. Because there is no
+dbus, there is no iwctl either. A small shell helper takes its place.</p>
+
+<p>First look for networks:</p>
+
+<pre>wifi scan</pre>
+
+<p>You get a table of network name, signal strength, frequency and security type.
+Then join one:</p>
+
+<pre>wifi join "My Network" "the password"</pre>
+
+<p>If the network is open, leave the password out.</p>
+
+<p>What that command does is worth knowing, because it explains the timing. It
+writes the passphrase into eiwd's own store under /var/lib/iwd, then restarts
+eiwd so it reads the new file, then waits for the connection. eiwd keeps the
+network from then on. You will see two lines:</p>
+
+<pre>associated on wlan0, waiting for an address...
+connected on wlan0 with 192.168.1.34</pre>
+
+<div class="box"><b>Note</b>Those two lines are separate events and there can be several seconds
+between them. The first means the card has joined the access point. The second
+means eiwd has finished dhcp and you have an address. eiwd does its own dhcp, so
+do not run udhcpc on a wireless interface.</div>
+
+<p>If association takes a while, that is normal. Twenty seconds is not unusual.</p>
+
+<p>You can check the state at any time:</p>
+
+<pre>wifi status</pre>
+
+<p>And see which networks eiwd has stored:</p>
+
+<pre>wifi known</pre>
+
+<h3 id="s11">3.4 Checking that it really works</h3>
+
+<p>An address is not the same as a working internet connection. Name resolution has
+to work too, and on a wireless link eiwd writes the resolver configuration a
+moment after it gets the address. The honest test is to use the network for what
+the install actually needs:</p>
+
+<pre>world tide</pre>
+
+<p>That downloads the package lists over https. If it answers indexes up to date
+then dns, tls and the repository are all working. If it cannot resolve the name
+or reach the server it says so.</p>
+
+<h2 id="c4">4. Preparing the disk</h2>
+
+<h3 id="s12">4.1 Finding the disk</h3>
+
+<pre>fdisk -l | grep '^Disk /dev'</pre>
+
+<p>Go by the size to tell your disk from the usb stick you booted from.</p>
+
+<p>From here on the examples use /dev/sda. Substitute your own disk everywhere.</p>
+
+<div class="box"><b>Important</b>Partition names differ by disk type. Partitions on sda are sda1
+and sda2. Partitions on an nvme disk called nvme0n1 are nvme0n1p1 and
+nvme0n1p2, with a p before the number. Sd cards behave like nvme, so
+mmcblk0 becomes mmcblk0p1.</div>
+
+<h3 id="s13">4.2 Deciding the layout</h3>
+
+<p>Generatrix ships busybox fdisk, which writes mbr partition tables only. There is
+no gpt editor on the image. This is a deliberate limit and it is rarely a
+problem, because an mbr partition of type ef is accepted as an efi system
+partition by almost all uefi firmware.</p>
+
+<p>For a bios machine you need one partition, the root.</p>
+
+<p>For a uefi machine you need two, a small fat partition for the firmware to read
+and the root.</p>
+
+<div class="box"><b>Note</b>If your firmware is strict and refuses to boot from an mbr esp, this
+handbook cannot get you installed from the shipped image, because there is no
+gpt tool on it. That case has not come up in testing, but it is honest to say it
+is possible.</div>
+
+<h3 id="s14">4.3 Creating the partitions</h3>
+
+<p>Start fdisk:</p>
+
+<pre>fdisk /dev/sda</pre>
+
+<p>For a bios machine, press these keys:</p>
+
+<pre>o     make a new empty mbr table
+n     new partition
+p     primary
+1     partition number
+2048  first sector, type this number yourself
+      press enter to accept the last sector
+a     mark a partition bootable
+1     partition 1
+w     write the table and exit</pre>
+
+<p>For a uefi machine:</p>
+
+<pre>o
+n  p  1   first sector 2048, last sector +100M
+t  ef     set the type of partition 1 to efi system
+n  p  2   first sector 206848, last sector default
+w</pre>
+
+<div class="box"><b>Warning</b>Type the first sector yourself every time. Busybox fdisk offers sector
+63, not 2048. On the second partition of a uefi layout the offered 63 overlaps
+the first partition and produces a disk that looks fine and then fails. 206848
+is 2048 plus the 204800 sectors of a 100 MB partition.</div>
+
+<h3 id="s15">4.4 Creating the filesystems</h3>
+
+<p>On a bios machine there is one filesystem:</p>
+
+<pre>mkfs.ext4 -L generatrix /dev/sda1</pre>
+
+<p>On a uefi machine the first partition is the esp and the second is the root:</p>
+
+<pre>mkfs.vfat -F 32 -n GXEFI /dev/sda1
+mkfs.ext4 -L generatrix /dev/sda2</pre>
+
+<div class="box"><b>Note</b>The label is a convenience for you, not something the boot loader uses.
+The kernel is pointed at the disk by partition id later, for a reason explained
+in chapter 7.</div>
+
+<h3 id="s16">4.5 Mounting</h3>
+
+<pre>mkdir -p /mnt
+mount /dev/sda1 /mnt</pre>
+
+<p>On a uefi machine the root is the second partition, so use /dev/sda2. Leave
+the esp unmounted for now, it is used in chapter 7.</p>
+
+<h2 id="c5">5. Installing the base system</h2>
+
+<h3 id="s17">5.1 About world</h3>
+
+<p>world is the Generatrix package manager. It is one static c program with no
+runtime dependencies. It reads the Alpine edge repositories directly along with
+the Generatrix repository, resolves dependencies, and unpacks apk archives with
+its own gzip and tar code.</p>
+
+<p>It verifies a cryptographic signature on every package and on the package index
+before it unpacks anything. That is why the next step copies keys.</p>
+
+<p>It can install into a directory other than /. That is the whole trick behind a
+manual install: you point it at the disk you just mounted.</p>
+
+<h3 id="s18">5.2 Preparing the target</h3>
+
+<pre>mkdir -p /mnt/etc/apk /mnt/etc/world /mnt/var/lib/world
+cp -a /etc/apk/keys /mnt/etc/apk/
+cp /etc/world/repositories /mnt/etc/world/repositories</pre>
+
+<p>The first line creates the directories world expects. The second copies the
+trusted signing keys, both the Generatrix key and the Alpine ones. The third
+copies the list of repositories, so the installed system reads the same ones the
+live image does.</p>
+
+<div class="box"><b>Note</b>The order of the lines in the repositories file matters. The first line
+has the highest priority. The Generatrix repository is listed first so that our
+replacements for banned gnu libraries win over the Alpine originals. Do not sort
+that file.</div>
+
+<h3 id="s19">5.3 What you are about to install</h3>
+
+<p>gx-system is a meta package. It contains no files of its own, it only depends
+on the pieces of a working system:</p>
+
+<pre>gx-musl         the c library
+gx-busybox      busybox and its several hundred applet links
+gx-init         s6, s6-rc, execline, mdevd
+gx-base         /sbin/init, network helpers, service definitions
+gx-etc          the default files for /etc
+gx-kernel       the kernel
+gx-boot         the limine files
+gx-e2fsprogs    mke2fs and e2fsck
+gx-wireless     eiwd and the scanner
+world           the package manager itself</pre>
+
+<p>That is about 20 MB installed.</p>
+
+<p>If you want the desktop as well, ask for gx-desktop instead. It adds hevel and
+colon and pulls in the wayland runtime, which comes to about 29 MB in total.</p>
+
+<p>These are ordinary packages. Nothing in that list is special or frozen, which is
+why world bloom can later replace all of it, kernel included.</p>
+
+<h3 id="s20">5.4 Installing</h3>
+
+<pre>WORLD_ROOT=/mnt world tide
+WORLD_ROOT=/mnt world seed gx-system</pre>
+
+<p>WORLD_ROOT=/mnt is what tells world to work on the mounted disk instead of the
+live system. tide downloads the package lists, seed installs. You are shown
+the list of packages and asked to confirm.</p>
+
+<h2 id="c6">6. Configuring the system</h2>
+
+<h3 id="s21">6.1 Finishing the install</h3>
+
+<p>The files are on the disk, but the system is not assembled yet. Two things are
+missing. The service database has not been compiled, and /etc has no default
+files in it. One program does both.</p>
+
+<p>Bind the kernel filesystems into the target first, because the tools it runs
+need them:</p>
+
+<pre>for d in dev proc sys; do mount -o bind /$d /mnt/$d; done
+chroot /mnt /usr/libexec/gx-refresh</pre>
+
+<p>gx-refresh does three jobs:</p>
+
+<ol>
+
+<li>It copies the default files into /etc where they are missing. It never
+overwrites a file that already exists, so running it again later is safe and
+your edits survive package upgrades.</li>
+
+<li>It compiles the s6 service database from /etc/s6-rc/source. If the compile
+fails it keeps the previous database rather than leaving you with none.</li>
+
+<li>After a kernel upgrade it saves the previous kernel and adds a second boot
+entry pointing at it.</li>
+
+</ol>
+
+<div class="box"><b>Note</b>That third job is the reason shipping the kernel as a package is safe. A
+kernel that does not boot leaves the old one in the boot menu.</div>
+
+<p>This same program runs automatically after every package install on a running
+system. It is also how gtk cache files, font caches and mime databases get
+rebuilt.</p>
+
+<h3 id="s22">6.2 The filesystem table</h3>
+
+<p>The kernel finds the root partition by the disk identifier, so the disk needs
+one. Busybox fdisk does not write it, so give the disk an identifier yourself.
+It is four random bytes at offset 440 of the disk:</p>
+
+<pre>dd if=/dev/urandom of=/dev/sda bs=1 count=4 seek=440 \
+    conv=notrunc</pre>
+
+<div class="box"><b>Warning</b>Run that on the whole disk, /dev/sda, not on a
+partition. It writes inside the boot sector, ahead of the partition table, and
+it does not touch your partitions.</div>
+
+<p>Now read it back:</p>
+
+<pre>dd if=/dev/sda bs=1 skip=440 count=4 2&gt;/dev/null | od -An -tx1 |
+    awk '{printf "%s%s%s%s\n",$4,$3,$2,$1}'</pre>
+
+<p>You get eight hex digits, something like 34db77b7. The bytes are printed in
+reverse because that is the order the kernel reads them in. Your first partition
+is then 34db77b7-01 and the second is 34db77b7-02.</p>
+
+<pre>printf 'PARTUUID=34db77b7-01 / ext4 rw,relatime 0 1\n' \
+    &gt; /mnt/etc/fstab</pre>
+
+<h3 id="s23">6.3 Hostname and password</h3>
+
+<pre>echo mymachine &gt; /mnt/etc/hostname
+chroot /mnt passwd root</pre>
+
+<h3 id="s24">6.4 Timezone and keyboard</h3>
+
+<p>These are optional. If the target has a zoneinfo directory:</p>
+
+<pre>chroot /mnt ln -sf \
+    /usr/share/zoneinfo/Europe/Istanbul /etc/localtime</pre>
+
+<p>The console keymap and the wayland keyboard layout are two different things. The
+console reads a compiled keymap file, wayland reads an environment variable. If
+you install the desktop later and your keyboard is not us, set both.</p>
+
+<h3 id="s25">6.5 Carrying your wifi over</h3>
+
+<p>If you set up wireless in chapter 3, the installed system can keep it:</p>
+
+<pre>mkdir -p /mnt/var/lib/iwd
+cp -a /var/lib/iwd/. /mnt/var/lib/iwd/</pre>
+
+<p>eiwd will find the network and connect at boot.</p>
+
+<h2 id="c7">7. The boot loader</h2>
+
+<h3 id="s26">7.1 How Generatrix boots</h3>
+
+<p>Generatrix uses limine. There is no initramfs on an installed system. The kernel
+mounts the root filesystem itself and runs /sbin/init directly.</p>
+
+<p>That single fact drives everything in this chapter, so it is worth stating
+plainly. Nothing runs before the kernel mounts the disk. There is no early
+userspace to look up disk labels, load modules or ask questions.</p>
+
+<h3 id="s27">7.2 Bios</h3>
+
+<pre>mkdir -p /mnt/boot/limine
+cp /mnt/usr/share/limine/limine-bios.sys /mnt/boot/limine/
+cat &gt; /mnt/boot/limine/limine.conf &lt;&lt;'EOF'
+timeout: 2
+/Generatrix Linux
+    protocol: linux
+    kernel_path: boot():/boot/vmlinuz-generatrix
+    cmdline: root=PARTUUID=34db77b7-01 ro mac80211_hwsim.radios=0
+EOF
+chroot /mnt limine bios-install /dev/sda</pre>
+
+<div class="box"><b>Important</b>Run the installed system's own limine, through
+chroot, not the one on the live image. The boot loader is in two pieces: the
+small piece bios-install writes into the boot sector, and limine-bios.sys on the
+disk. The two are checked against each other at boot and must come from the same
+build. If they do not match, the machine stops with "limine-bios.sys build ID
+mismatch" before the kernel ever starts. The chroot needs /dev inside the
+target, which chapter 6.1 already mounted for you.</div>
+
+<h3 id="s28">7.3 Uefi</h3>
+
+<pre>mkdir -p /mnt/esp
+mount /dev/sda1 /mnt/esp
+mkdir -p /mnt/esp/EFI/BOOT /mnt/esp/boot/limine
+cp /mnt/usr/share/limine/BOOTX64.EFI \
+    /mnt/esp/EFI/BOOT/BOOTX64.EFI
+cp /mnt/boot/vmlinuz-generatrix /mnt/esp/boot/
+cat &gt; /mnt/esp/boot/limine/limine.conf &lt;&lt;'EOF'
+timeout: 2
+/Generatrix Linux
+    protocol: linux
+    kernel_path: boot():/boot/vmlinuz-generatrix
+    cmdline: root=PARTUUID=34db77b7-01 ro mac80211_hwsim.radios=0
+EOF
+umount /mnt/esp</pre>
+
+<p>There is no limine bios-install step on uefi. The firmware loads
+EFI/BOOT/BOOTX64.EFI by itself.</p>
+
+<h3 id="s29">7.4 The command line, explained</h3>
+
+<p>Three things in that cmdline are load bearing. Put your own disk id in place
+of 34db77b7 and leave the rest alone unless you know what you are changing.</p>
+
+<p>root=PARTUUID=...</p>
+
+<p>The kernel has to find the root filesystem with nothing else running. It can
+read a partition id out of the partition table on its own. It cannot resolve a
+filesystem label or a filesystem uuid, because those live inside the filesystem
+and something has to read them first. On a system with an initramfs that
+something exists. Here it does not.</p>
+
+<p>If you write root=LABEL=generatrix the machine stops with
+VFS: Unable to mount root fs on unknown-block(0,0).</p>
+
+<p>ro</p>
+
+<p>/sbin/init runs e2fsck on the root filesystem and then remounts it read
+write. e2fsck refuses to check a filesystem that is already mounted read write,
+which is correct of it. If you boot with rw the check fails and init drops you
+into a repair shell.</p>
+
+<p>mac80211_hwsim.radios=0</p>
+
+<p>The kernel includes the mac80211 wireless simulator. Left alone it creates two
+fake radios at boot. On a machine with a real card this pushes the real
+interface to wlan2, and the wifi helper, which looks at wlan0 first, stops
+finding it. Setting the option to zero keeps the simulator quiet.</p>
+
+<h2 id="c8">8. Rebooting</h2>
+
+<p>Unmount everything in the right order and restart:</p>
+
+<pre>umount /mnt/dev /mnt/proc /mnt/sys
+umount /mnt
+reboot</pre>
+
+<p>Take the usb stick out while the machine restarts.</p>
+
+<p>You should get the limine menu, then a login prompt with your hostname. Log in
+as root with the password you set.</p>
+
+<h2 id="c9">9. After the installation</h2>
+
+<h3 id="s30">9.1 Keeping the system current</h3>
+
+<pre>world tide
+world bloom</pre>
+
+<p>bloom upgrades everything that is installed, and on Generatrix that really
+does mean everything. The kernel, the c library, busybox, init and the package
+manager itself are all packages, so they all move with this one command.</p>
+
+<div class="box"><b>Note</b>When the kernel is replaced the previous one stays on disk and a second
+boot menu entry appears for it. If a new kernel does not boot on your hardware,
+pick the previous entry in the menu and carry on.</div>
+
+<h3 id="s31">9.2 Adding the desktop</h3>
+
+<pre>world seed gx-desktop</pre>
+
+<h3 id="s32">9.3 Installing other software</h3>
+
+<p>world reads the Alpine edge repositories, so most of that catalogue is
+available:</p>
+
+<pre>world map firefox
+world seed firefox</pre>
+
+<p>Some of it refuses to install, on purpose:</p>
+
+<pre>error: bash is gnu software. gnu does not run on generatrix.</pre>
+
+<p>That is not a bug. Generatrix bans gnu software by name. Where a program needs a
+gnu library, the distribution ships its own non gnu implementation under the
+same name and the same interface, so the program installs and runs with no gnu
+code anywhere. Where the program itself is gnu, it is refused.</p>
+
+<h3 id="s33">9.4 Command reference</h3>
+
+<pre>world tide            refresh the repository indexes
+world seed &lt;pkg&gt;      install
+world bloom           upgrade everything
+world weed            remove packages nothing needs any more
+world map &lt;pattern&gt;   search
+world probe &lt;pkg&gt;     show details about a package
+world grove           list what is installed
+world vaporize &lt;pkg&gt;  remove</pre>
+
+<h2 id="c10">10. If something goes wrong</h2>
+
+<h3 id="s41">limine-bios.sys build ID mismatch</h3>
+
+<p>The boot loader stops before the kernel starts. The piece in the boot sector
+and the limine-bios.sys on the disk come from different builds. Redo the boot
+loader step with the installed system's own limine,
+<code>chroot /mnt limine bios-install /dev/sda</code>, and make sure
+/mnt/boot/limine/limine-bios.sys was copied from /mnt/usr/share/limine, not from
+the live image. See 7.2.</p>
+
+<h3 id="s34">Kernel panic: Attempted to kill init</h3>
+
+<p>The kernel found and mounted the root filesystem but could not run
+/sbin/init. Check that root= points at the right partition, and that
+/sbin/init exists on it and can be executed.</p>
+
+<h3 id="s35">Kernel panic: VFS: Unable to mount root fs</h3>
+
+<p>The kernel could not find the root filesystem from your root= setting. Nearly
+always this is a LABEL= or UUID= where a PARTUUID= is required. See 7.4.</p>
+
+<h3 id="s36">Boot ends in a repair shell and fsck failed</h3>
+
+<p>The command line says rw. Change it to ro. See 7.4.</p>
+
+<h3 id="s37">world cannot fetch a repository index</h3>
+
+<p>world skips a repository it cannot reach and continues with the others, so this
+only stops the install when none of them answer. Check the network with the test
+in 3.4.</p>
+
+<h3 id="s38">Wifi saved the network but never connects</h3>
+
+<p>Give it up to a minute. Association and dhcp are separate steps and the second
+is silent until it succeeds. wifi status shows the interface state and whether
+it has an address. wifi known lists what eiwd has stored.</p>
+
+<h3 id="s39">The wireless interface is called wlan2 and nothing works</h3>
+
+<p>The kernel wifi simulator created two fake radios. Your command line is missing
+mac80211_hwsim.radios=0. See 7.4.</p>
+
+<h3 id="s40">Programs have no text in their menus after installing a desktop</h3>
+
+<p>Run world bloom once. Toolkits like gtk need cache files that are generated
+after installation. Current versions of world build them for you.</p>
+
+<footer>
+<p><a href="/">generatrix linux</a></p>
+</footer>
+</main>
+</body>
+</html>

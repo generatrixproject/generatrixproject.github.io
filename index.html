@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generatrix Linux - Radically Anti-GNU Minimal Linux Distribution</title>
+<meta name="description" content="Generatrix Linux is a small independent Linux distribution with no GNU and no systemd. Built from source on musl and busybox with s6 init. A 12 MB live and installable ISO. An installed system idles at 13 MB of RAM.">
+<link rel="canonical" href="https://generatrixproject.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generatrix Linux - Radically Anti-GNU">
+<meta property="og:description" content="A small, independent Linux distribution with no GNU and no systemd. musl, busybox, s6, clang. 12 MB ISO, 13 MB of RAM once installed.">
+<meta property="og:url" content="https://generatrixproject.github.io/">
+<style>
+@font-face{font-family:"Gx8x8";src:url(data:font/woff;base64,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) format("woff");font-display:swap}
+:root{--bg:#ff7a00;--fg:#000;--link:#0000cc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+ font-family:"Gx8x8","Courier New",monospace;font-size:16px;line-height:2;
+ -webkit-font-smoothing:none;font-smooth:never;padding:2rem 1rem}
+main{max-width:74ch;margin:0 auto}
+h1{font-size:32px;line-height:1.4;margin:0}
+h2{font-size:16px;margin:2.5rem 0 .5rem;text-transform:lowercase}
+h3{font-size:16px;margin:1.8rem 0 .3rem;font-weight:normal;text-decoration:underline}
+p,li{margin:.5rem 0}
+ul{padding-left:2ch}
+a{color:var(--link)}
+a:hover{background:var(--link);color:var(--bg)}
+pre{margin:.8rem 0;overflow-x:auto;font-family:inherit;font-size:16px;line-height:1.8}
+hr{border:0;border-top:2px solid var(--fg);margin:2.5rem 0}
+header p{margin:.2rem 0 0}
+footer{margin-top:3rem;font-size:16px}
+img{max-width:100%;height:auto;border:2px solid var(--fg);display:block}
+html{scroll-behavior:smooth}
+.jump{position:fixed;top:1rem;right:1rem;display:flex;align-items:center;
+ gap:.6ch;color:var(--link);text-decoration:none;border:2px solid var(--fg);
+ padding:.15rem .5rem;background:var(--bg)}
+.jump span{width:0;height:0;border-left:5px solid transparent;
+ border-right:5px solid transparent;border-top:9px solid var(--link)}
+.jump:hover{background:var(--link);color:var(--bg)}
+.jump:hover span{border-top-color:var(--bg)}
+@media(max-width:640px){.jump{top:.4rem;right:.4rem}}
+@media(max-width:640px){body{font-size:12px;padding:1rem .6rem}
+ h1{font-size:24px}h2,h3,p,li,pre{font-size:12px}}
+</style>
+</head>
+<body>
+<a class="jump" href="#downloads">iso<span></span></a>
+<main>
+<header>
+<h1>Generatrix Linux</h1>
+<p>Radically Anti-GNU</p>
+</header>
+
+<h2>generatrix linux</h2>
+<p>a small, independent linux distribution with no gnu and no systemd. built from
+source, from scratch, on musl and busybox. rolling, no version numbers, no
+codenames. the whole live-and-installable system fits in a 12 mb iso. once installed
+it idles at 13 mb of ram, measured, not guessed. it wants about 64 mb in the machine to boot though,
+the kernel unpacks itself into ram before anything else runs.</p>
+
+<h2>frequently asked questions</h2>
+<p>these are some supposedly frequently asked questions.</p>
+
+<h3>what is generatrix?</h3>
+<p>a linux distribution built by removing things instead of adding them. no gnu
+userland, no systemd, no dbus, no base system to fight against. musl libc,
+busybox, s6 for init, clang instead of gcc, limine to boot. that's basically the
+whole thing.</p>
+
+<h3>is generatrix stable?</h3>
+<p>mostly. it installs and boots on real bios and uefi hardware, wifi works, the
+package manager works. but it's getting developed by 3 person(me, I and myself)</p>
+
+<h3>should i install generatrix?</h3>
+<p>Yeah you need to install generatrix because</p>
+<ul>
+<li>its lighter than tinycore</li>
+<li>its better than BigRatOS</li>
+<li>reliable and small distro</li>
+</ul>
+
+<h3>is modern browsers, games and other shit available on generatrix?</h3>
+<p>probably. world installs standard alpine .apk packages from the alpine edge
+repos, so most of the alpine catalogue works. if it's gnu software though, no.
+see below.</p>
+
+<h3>is generatrix gnu/linux?</h3>
+<p>no. that's the entire point.</p>
+
+<h3>why do you hate gnu?</h3>
+<p>they ruined forth by gforth also aint no way im writing on (((((((((lisp)))))))))</p>
+
+<h3>what's world?</h3>
+<p>world is our package manager. it's one ~1000-line c program, a single static
+binary, no runtime dependencies. it reads alpine's edge repos directly, resolves
+dependencies, and unpacks the .apk archives itself with its own gzip and tar
+code instead of shelling out to tar. it also unpacks safely, it won't let a
+package write outside the target or overwrite files through a symlink.</p>
+<p>it has a growth-themed cli because why not:</p>
+<pre>world tide            refresh the repo indexes
+world seed &lt;pkg&gt;      install
+world bloom           upgrade everything
+world weed            remove orphaned dependencies
+world map &lt;pattern&gt;   search
+world probe &lt;pkg&gt;     info
+world grove           list installed
+world vaporize &lt;pkg&gt;  remove</pre>
+
+<h3>so how does it block gnu?</h3>
+<p>if you ask world to install gnu software it just refuses:</p>
+<pre>error: bash is gnu software. gnu does not run on generatrix.</pre>
+<p>it also swaps a few bloated non-gnu tools for leaner ones on its own, like meson
+for muon, ninja for samurai, sudo for doas, man-db for mandoc. and it turns away
+lisps for having too many parentheses. that last one is a joke, but it's also
+real, it will actually refuse to install sbcl.</p>
+
+<h3>but doesn't banning gnu break half the software you'd want to install?</h3>
+<p>it would, if we stopped at the ban. a lot of programs need a gnu library
+somewhere down the chain, so banning the library would drag the whole program
+down with it.</p>
+<p>so we don't just ban them, we replace them. when a program needs a banned gnu
+library, we write our own non-gnu version that answers to the same name and the
+same abi, ships zero gnu code, and gets tested against the real library so it
+behaves the same. the program links against ours and never knows the difference.</p>
+<p>so far we've done:</p>
+<pre>libtasn1        our own clean-room asn.1 engine, checked against real
+                libtasn1 on actual x.509 certificates
+libunistring    backed by utf8proc, matched across every unicode codepoint
+readline        libedit
+gettext/iconv   musl already does these, we just answer to the old names
+fribidi         sheenbidi
+ncurses         netbsd-curses</pre>
+<p>the gnu tls stack that printing and networking drag in gets rebuilt on
+openssl instead</p>
+<p>the gnu ban stays total and your software still installs. no gnu code ships.</p>
+
+<h3>how big is it really?</h3>
+<p>the minimal iso is 12 mb. a fresh install idles at
+13 mb of ram. the live image itself sits at 19 mb, because it keeps its
+filesystem in memory. you still want 64 mb or more in the box,
+because the kernel decompresses into memory first and that alone is 40 mb. there's also a 64-bit gui edition, which is a
+plan-9-style floating wayland compositor called hevel driven by mouse chords.
+<a href="https://sr.ht/~dlm/hevel/">hevel's sourcehut page for supporting</a>
+the whole gui iso is 17 mb, and it idles at 23 mb with the compositor
+running.</p>
+
+<h3>does it do uefi?</h3>
+<p>yes, and bios, from the same image. the gui edition's installer detects your
+firmware and sets up the right boot partition either way. it's a plain
+openbsd-style question and answer installer, no tui art, no mouse. the minimal
+edition has no installer at all, you do it by hand with the handbook.</p>
+
+<h3>what license is generatrix under?</h3>
+<p>the whole repository is bsd 2-clause plus patent. take it, fork it, ship it,
+sell it, doesn't matter. it is also, unlike some distributions, not available for
+7.5 thousand dollars per sku.</p>
+
+<hr>
+
+<h2>what it looks like</h2>
+<p><a href="boot.png"><img src="boot.png" alt="The Generatrix Linux boot menu drawn by Limine, offering live, verbose and textmode debug entries"></a></p>
+<p>the limine boot menu, and the gui edition: hevel, three havoc terminals, the
+installer, and world turning down bash.</p>
+<p><a href="screenshot.png"><img src="screenshot.png" alt="Generatrix Linux running the hevel wayland compositor with three havoc terminals: the installer asking for a keyboard layout, fastfetch reporting Generatrix Linux with the hevel window manager, and world refusing to install bash because it is GNU software"></a></p>
+
+<h2>links</h2>
+<ul>
+<li><a href="https://gitlab.com/generatrix-linux/generatrix-linux">gitlab.com/generatrix-linux/generatrix-linux</a></li>
+<li><a href="https://gitlab.com/generatrix-linux/generatrix-linux/-/issues">found a bug? open an issue</a></li>
+<li><a href="handbook.html">install it by hand: the handbook</a></li>
+<li><a href="/gx-repo/x86_64/">package repository</a></li>
+</ul>
+
+<h2 id="downloads">downloads</h2>
+<p>the minimal image has no installer, on purpose. it is by hand or not at
+all, and the <a href="handbook.html">handbook</a> walks you through it. the
+gui image still asks you questions.</p>
+<p>rolling images. write one to a usb stick (Generatrix DOES NOT LOVES DUALBOOTING HES YANDERE)
+with dd and boot it. the gui image has an installer, the minimal one does
+not.</p>
+<ul>
+<li><a href="https://gitlab.com/-/project/84679835/uploads/d248af03a24c0bffbf06de713d8363b2/generatrix-rolling-x86_64.iso">generatrix-rolling-x86_64.iso</a> &mdash; 64-bit, 12 mb, the minimal system, no installer</li>
+<li><a href="https://gitlab.com/-/project/84679835/uploads/7658cc183e8ef13cce61f4090b2c66c5/generatrixgui-rolling-x86_64.iso">generatrixgui-rolling-x86_64.iso</a> &mdash; 64-bit gui edition with the hevel wayland compositor, 17 mb</li>
+</ul>
+
+
+<h2 id="changelog">changelog</h2>
+<p>rolling, so there are no releases to number. these are the dates things
+actually changed.</p>
+
+<h3>august 2026</h3>
+<ul>
+<li>the 32-bit build is gone. generatrix is 64-bit only from now on. it was
+a toy from the start, it never had the package manager, and keeping a second
+kernel and a second toolchain alive was work that bought nobody anything.</li>
+<li>generatrix rolls all the way down now. the kernel, the c library, busybox,
+the s6 init programs, e2fsprogs, the wifi programs, the boot loader files and
+the init scripts are all ordinary packages. before this they were written into
+the image by the build and then frozen at install time. you install once and
+world bloom moves the whole system forward, kernel included.</li>
+<li>you can install by hand, with no installer at all:
+<pre>WORLD_ROOT=/mnt world seed gx-system
+chroot /mnt /usr/libexec/gx-refresh</pre>
+that gives you a complete system in about 20 mb. ask for
+gx-desktop instead if you also want the wayland desktop.</li>
+<li>world can replace itself while it is running.</li>
+<li>a kernel update keeps the old kernel and adds a second boot entry for it, so
+a broken kernel cannot lock you out.</li>
+<li>the installer sets up the network first, because it downloads its packages
+now instead of copying the live image. if a cable is plugged in it just uses it.
+if not, it scans for wifi with our own eiwd, shows you the networks, asks for
+the one you want and its password, and lets eiwd save it.</li>
+<li>the minimal image no longer ships an installer. that one is by hand or not
+at all. there is a handbook for it.</li>
+<li>world skips a repository it cannot reach and carries on with the others. it
+used to stop, which was enough to break an install.</li>
+<li>fixed: the installer installed almost nothing. when world was pointed at
+another root it still read the package database of the running system, so every
+package the live image already had was counted as installed and skipped. the
+new system came out without world itself, without the wayland libraries and
+without a package database of its own. WORLD_LIB and WORLD_REPOS now follow
+WORLD_ROOT. a fresh install is 37 packages and about 21 mb of /usr again.</li>
+<li>fixed: on an installed system three services never started. the s6 helper
+that runs one-shot services was not in any package, so loopback stayed down,
+device coldplug never ran and the console keymap was never loaded. the init
+package is now built from the list of files the s6 build actually installs, not
+from a list typed by hand, which is also how twenty six more execline programs
+found their way in.</li>
+<li>fixed: a system installed by hand stopped at "limine-bios.sys build ID
+mismatch" before the kernel started. the boot loader is in two pieces and they
+have to come from the same build. the boot loader is now installed with the new
+system's own limine, and that program ships in a package instead of only
+existing on the live image.</li>
+<li>fixed: a base install with no desktop kept trying to start the compositor
+and failing, because the service description was in the base package. it belongs
+to hevel now.</li>
+<li>the handbook was wrong in two places and has been corrected. busybox fdisk
+offers sector 63, not 2048, and it writes no disk identifier at all, so the
+handbook now tells you to create one. both were found by running the handbook
+from top to bottom in a virtual machine and booting what came out.</li>
+<li>fixed: colon showed only the first lines of a program and never scrolled.
+the terminal was telling programs its height and width the wrong way round, so
+they wrote to lines that were off the screen.</li>
+<li>fixed: caps lock, alt gr and num lock did nothing in colon. it was reading
+only one of the three modifier fields wayland sends, and it only ever looked at
+the first two levels of the keymap, so the alt gr symbols on a turkish layout
+were out of reach.</li>
+<li>the gui edition has its own terminal now. colon is written in forth, it is
+about 92 kb, it is statically linked and it links nothing but libc - no
+libwayland, no libxkbcommon, no freetype, no fontconfig. it speaks the wayland
+protocol on the socket itself and rasterises its own truetype glyphs. havoc is
+gone.</li>
+<li>colon starts on a dark palette, and the compositor paints a pastel sage
+background instead of the old teal.</li>
+<li>world tells you where every package comes from now:
+<pre>alpine/edge/main/busybox
+alpine/edge/community/gtk+3.0
+gx-repo/fribidi</pre></li>
+<li>world rebuilds the caches that alpine's package triggers would normally
+build: glib schemas, gdk-pixbuf loaders, the mime database, font caches. no
+package script is ever executed, it just runs the cache builders if they are
+there.</li>
+<li>fixed: the live image booted from a cd but panicked when booted from a usb
+stick. the initramfs believed findfs, which pointed it at a 68 kb partition that
+merely looked like the iso filesystem from the outside. it now insists that the
+squashfs really mounts before it accepts a device.</li>
+<li>fixed: every executable bit in the repository had been lost in an upload, so
+/sbin/init was not executable and the kernel gave up with "attempted to kill
+init". the build sets the bits itself now and refuses to produce an image if
+init cannot be executed.</li>
+<li>fixed: the repository list shipped empty, so world had nothing to index and
+nothing to install.</li>
+<li>fixed: firefox drew its whole interface with no text in it. it was not a
+font problem. without the compiled glib schemas gtk could not work out the
+screen dpi, reported it as -1, and firefox duly laid out every menu and the
+address bar at a negative font size. the cache rebuild above is the fix.</li>
+<li>fixed: our netbsd-curses laid out cchar_t differently from ncurses, so
+wide-character programs like htop drew their labels and then nothing else. the
+struct matches byte for byte now.</li>
+<li>fixed: curl was configured as if it were being built natively instead of
+cross, and the libcurl that came out had no ca bundle path compiled in.</li>
+<li>fixed: two keyboard bugs in colon. the keymap size was read from the wrong
+offset, because file descriptors take no room in a wayland message, and numeric
+keysyms were not understood at all.</li>
+</ul>
+
+<h3>july 2026</h3>
+<ul>
+<li>packages and the repository index are signed, and world verifies both
+before it unpacks anything. a tampered package is refused.</li>
+<li>the package repository moved online, which is what made the images small.</li>
+<li>uefi boot, for the live image and for installs, from the same file as
+bios.</li>
+<li>more gnu libraries answered by non-gnu code: a clean-room asn.1 engine for
+libtasn1, utf8proc behind libunistring, punycode and idna2008 for libidn2,
+libedit behind readline, and musl answering for gettext and iconv.</li>
+<li>the images got a lot smaller: the minimal one went from 18.4 to 12.4 mb.</li>
+</ul>
+
+
+<footer>
+<p>built and maintained by garodaemon.</p>
+<p>thanks for FeriBSD,caqq,Vubrix,dapuffy and microfoss for supporting.</p>
+</footer>
+</main>
+</body>
+</html>
